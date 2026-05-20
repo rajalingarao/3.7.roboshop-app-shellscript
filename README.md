@@ -152,9 +152,6 @@ cd 3.7.roboshop-app-shellscript
 sudo sh dispatch.sh
 ```
 
-
-
-##############################################3
 # Trouble shoot the mysql server:
 ```
 mysql -h mysql.lithesh.shop -u root -pExpenseApp@1
