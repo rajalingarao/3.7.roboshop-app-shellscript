@@ -154,5 +154,5 @@ sudo sh dispatch.sh
 
 # Trouble shoot the mysql server:
 ```
-mysql -h mysql.lithesh.shop -u root -pExpenseApp@1
+mysql -h mysql.lithesh.shop -u root -pRoboShop@1
 ```
