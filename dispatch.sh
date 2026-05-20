@@ -67,7 +67,7 @@ VALIDATE $? "get Dispatch"
 go build &>>$LOGFILE
 VALIDATE $? "build Dispatch"
 
-cp /home/ec2-user/roboshop-app-shellscript/dispatch.service /etc/systemd/system/dispatch.service &>>$LOGFILE
+cp /home/ec2-user/3.7.roboshop-app-shellscript/dispatch.service /etc/systemd/system/dispatch.service &>>$LOGFILE
 VALIDATE $? "Copied payment service"
 
 systemctl daemon-reload &>>$LOGFILE

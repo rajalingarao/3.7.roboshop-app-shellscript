@@ -58,7 +58,7 @@ VALIDATE $? "extracting payment"
 pip3.11 install -r requirements.txt &>>$LOGFILE
 VALIDATE $? "Installing dependencies"
 
-cp /home/ec2-user/roboshop-app-shellscript/payment.service /etc/systemd/system/payment.service &>>$LOGFILE
+cp /home/ec2-user/3.7.roboshop-app-shellscript/payment.service /etc/systemd/system/payment.service &>>$LOGFILE
 VALIDATE $? "Copied payment service"
 
 systemctl daemon-reload &>>$LOGFILE
