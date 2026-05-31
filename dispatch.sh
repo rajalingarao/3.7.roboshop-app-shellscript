@@ -61,8 +61,12 @@ VALIDATE $? "Moving to app directory"
 go mod init dispatch &>>$LOGFILE
 VALIDATE $? "Initiating dispatch"
 
-go get &>>$LOGFILE
-VALIDATE $? "get Dispatch"
+# go get &>>$LOGFILE
+# VALIDATE $? "get Dispatch"
+
+#Fix 1: Use go mod tidy instead of go get
+go mod tidy &>>$LOGFILE
+VALIDATE $? "Downloading dependencies"
 
 go build &>>$LOGFILE
 VALIDATE $? "build Dispatch"
