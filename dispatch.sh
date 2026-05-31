@@ -46,7 +46,7 @@ VALIDATE $? "Clean up existing directory"
 mkdir -p /app &>>$LOGFILE
 VALIDATE $? "Creating app directory"
 
-curl -o /tmp/dispatch.zip https://roboshop-builds.s3.amazonaws.com/dispatch.zip &>>$LOGFILE
+curl -o /tmp/dispatch.zip https://roboshop-artifacts.s3.amazonaws.com/dispatch-v3.zip &>>$LOGFILE
 VALIDATE $? "Downloading Dispatch application"
 
 cd /app &>>$LOGFILE
@@ -61,12 +61,15 @@ VALIDATE $? "Moving to app directory"
 go mod init dispatch &>>$LOGFILE
 VALIDATE $? "Initiating dispatch"
 
-# go get &>>$LOGFILE
-# VALIDATE $? "get Dispatch"
+# export GOPATH=/root/go
+# mkdir -p $GOPATH
+
+go get &>>$LOGFILE
+VALIDATE $? "get Dispatch dependencies"
 
 #Fix 1: Use go mod tidy instead of go get
-go mod tidy &>>$LOGFILE
-VALIDATE $? "Downloading dependencies"
+# go mod tidy &>>$LOGFILE
+# VALIDATE $? "Downloading dependencies"
 
 go build &>>$LOGFILE
 VALIDATE $? "build Dispatch"
