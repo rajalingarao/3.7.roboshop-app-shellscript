@@ -54,3 +54,11 @@ else
    echo -e "USER already exists...$Y SKIPPING $N"
 fi
 
+echo -e "${G}Rabbitmq server installation completed successfully${N}"
+echo "Log file: $LOGFILE"
+
+echo "***************************************"
+sudo systemctl status rabbitmq-server
+echo "***************************************"
+sudo ps -ef | grep rabbitmq-server
+echo "***************************************"

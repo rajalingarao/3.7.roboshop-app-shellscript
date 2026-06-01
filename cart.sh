@@ -78,3 +78,11 @@ VALIDATE $? "Enabling cart"
 systemctl start cart &>>$LOGFILE
 VALIDATE $? "starting cart"
 
+echo -e "${G}Cart installation completed successfully${N}"
+echo "Log file: $LOGFILE"
+
+echo "***************************************"
+sudo systemctl status cart
+echo "***************************************"
+sudo ps -ef | grep cart
+echo "***************************************"

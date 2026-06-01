@@ -69,3 +69,12 @@ VALIDATE $? "Enable payment"
 
 systemctl start payment &>>$LOGFILE
 VALIDATE $? "start payment"
+
+echo -e "${G}Payment installation completed successfully${N}"
+echo "Log file: $LOGFILE"
+
+echo "***************************************"
+sudo systemctl status payment
+echo "***************************************"
+sudo ps -ef | grep payment
+echo "***************************************"

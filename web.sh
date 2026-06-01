@@ -55,3 +55,11 @@ VALIDATE $? "Copied roboshop conf"
 systemctl restart nginx &>>$LOGFILE
 VALIDATE $? "Restarting nginx Server"
 
+echo -e "${G}Web/Nginx installation completed successfully${N}"
+echo "Log file: $LOGFILE"
+echo "***************************************"
+sudo systemctl status nginx
+echo "***************************************"
+sudo ps -ef | grep nginx
+echo "***************************************"
+

@@ -96,3 +96,12 @@ fi
 
 systemctl restart catalogue &>>$LOGFILE
 VALIDATE $? "Restarting catalogue"
+
+echo -e "${G}Catalogue installation completed successfully${N}"
+echo "Log file: $LOGFILE"
+
+echo "***************************************"
+sudo systemctl status catalogue
+echo "***************************************"
+sudo ps -ef | grep catalogue
+echo "***************************************"

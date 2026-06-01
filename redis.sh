@@ -39,3 +39,12 @@ VALIDATE $? "Enabling redis"
 
 systemctl start redis &>>$LOGFILE
 VALIDATE $? "Starting Redis"
+
+echo -e "${G}Redis installation completed successfully${N}"
+echo "Log file: $LOGFILE"
+
+echo "***************************************"
+sudo systemctl status redis
+echo "***************************************"
+sudo ps -ef | grep redis
+echo "***************************************"

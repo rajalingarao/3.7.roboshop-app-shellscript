@@ -91,3 +91,13 @@ fi
 
 systemctl restart shipping &>>$LOGFILE
 VALIDATE $? "Restarting shipping"
+
+
+echo -e "${G}Shipping installation completed successfully${N}"
+echo "Log file: $LOGFILE"
+
+echo "***************************************"
+sudo systemctl status shipping
+echo "***************************************"
+sudo ps -ef | grep shipping
+echo "***************************************"

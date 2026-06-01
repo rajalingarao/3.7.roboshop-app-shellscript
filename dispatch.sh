@@ -82,5 +82,5 @@ echo "Log file: $LOGFILE"
 echo "***************************************"
 sudo systemctl status dispatch
 echo "***************************************"
-ps -ef | grep dispatch
+sudo ps -ef | grep dispatch
 echo "***************************************"

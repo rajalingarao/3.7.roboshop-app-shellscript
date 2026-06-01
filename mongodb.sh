@@ -45,3 +45,12 @@ VALIDATE $? "Remote server access"
 
 systemctl restart mongod &>>$LOGFILE
 VALIDATE $? "Restarting MongoDB"
+
+echo -e "${G}Mongodb installation completed successfully${N}"
+echo "Log file: $LOGFILE"
+
+echo "***************************************"
+sudo systemctl status mongodb
+echo "***************************************"
+sudo ps -ef | grep mongodb
+echo "***************************************"

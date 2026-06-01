@@ -45,3 +45,13 @@ then
 else
    echo -e "MySQL Root password is already setup...$Y SKIPPING $N"
 fi
+
+
+echo -e "${G}Mysql installation completed successfully${N}"
+echo "Log file: $LOGFILE"
+
+echo "***************************************"
+sudo systemctl status mysqld
+echo "***************************************"
+sudo ps -ef | grep mysqld
+echo "***************************************"
